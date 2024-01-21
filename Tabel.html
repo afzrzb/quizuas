@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis</title>
+  
+    <style>
+      .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .confirm {
+        color: blue;
+        cursor: pointer;
+      }
+
+      .confirm:hover {
+        color: black;
+      }
+    </style>
+  </head>
+ <div class="navbar-container">
+        <ul class="ul-container">
+          <li class="li-container">
+            <a href="Input data.html" class="a-navbar">Input Data</a>
+          </li>
+          <li class="li-container">
+            <a href="Tabel.html" class="a-navbar">Tabel</a>
+          </li>
+  <body>
+    <div class="content">
+      <div class="table">
+        <table border="1px solid black" cellpadding="10" cellspacing="0">
+          <tr>
+            <td>No Anggota</td>
+            <td>Nama</td>
+            <td>Np Handphone</td>
+            <td>Email</td>
+            <td>Umur</td>
+            <td>Action</td>
+          </tr>
+          <tr>
+            <td>Agxxx</td>
+            <td>Anonym</td>
+            <td>08xxxxxxxxxxx</td>
+            <td>anonym@gmail.com</td>
+            <td>00</td>
+            <td class="confirm">Hapus</td>
+          </tr>
+          <tr>
+            <td>Agxxx</td>
+            <td>Anonym</td>
+            <td>08xxxxxxxxxxx</td>
+            <td>anonym@gmail.com</td>
+            <td>00</td>
+            <td class="confirm">Hapus</td>
+          </tr>
+          <tr>
+            <td>Agxxx</td>
+            <td>Anonym</td>
+            <td>08xxxxxxxxxxx</td>
+            <td>anonym@gmail.com</td>
+            <td>00</td>
+            <td class="confirm">Hapus</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      const content = document.querySelector(".table");
+      /* main */
+      content.addEventListener("click", function (e) {
+        if (e.target.className == "confirm") {
+          e.target.parentElement = confirm("Apakah Anda Ingin Menghapus ?");
+        }
+      });
+    </script>
+  </body>
+</html>

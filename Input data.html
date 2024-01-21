@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input</title>
+    <style>
+      .content {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .form {
+        background-color: antiquewhite;
+        padding: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.353);
+      }
+    </style>
+  </head>
+ <div class="navbar-container">
+        <ul class="ul-container">
+          <li class="li-container">
+            <a href="Input data.html" class="a-navbar">Input Data</a>
+          </li>
+          <li class="li-container">
+            <a href="Tabel.html" class="a-navbar">Tabel</a>
+          </li>
+  <body>
+    <div class="content">
+      <div class="form">
+        <h3>Input Data Barang</h3>
+        <table>
+          <tr>
+            <td>No Keanggotaan :</td>
+            <td><input type="number" name="an" value="" /></td>
+          </tr>
+          <tr>
+            <td>Nama :</td>
+            <td><input type="text" name="name" value="" /></td>
+          </tr>
+          <tr>
+            <td>No Hp :</td>
+            <td><input type="number" name="no" value="" /></td>
+          </tr>
+          <tr>
+            <td>Email :</td>
+            <td><input type="text" name="em" value="" /></td>
+          </tr>
+          <tr>
+            <td>Umur :</td>
+            <td><input type="number" name="age" value="" /></td>
+          </tr>
+          <tr>
+            <td>
+              <button class="sub">Submit</button>
+              <button class="res">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      const an = document.querySelector("input[name=an]");
+      const name = document.querySelector("input[name=name]");
+      const no = document.querySelector("input[name=no]");
+      const em = document.querySelector("input[name=em]");
+      const age = document.querySelector("input[name=age]");
+
+      /*  function button */
+      const sub = document.querySelector(".sub");
+      const res = document.querySelector(".res");
+
+      /* main */
+
+      sub.addEventListener("click", function () {
+        if (an.value == "") {
+          alert("No Anggota Kosong");
+        } else if (name.value == "") {
+          alert("Nama Kosong");
+        } else if (no.value == "") {
+          alert("No Hp Kosong");
+        } else if (em.value == "") {
+          alert("Email Kosong");
+        } else if (age.value == "") {
+          alert("Umur Kosong");
+        } else if (age.value < 15) {
+          alert("Umur Tidak Memenuhi Syarat");
+        } else {
+          alert("Login Berhasil");
+        }
+      });
+
+      res.addEventListener("click", function () {
+        an.value = "";
+        name.value = "";
+        no.value = "";
+        em.value = "";
+        age.value = "";
+      });
+    </script>
+  </body>
+</html>
